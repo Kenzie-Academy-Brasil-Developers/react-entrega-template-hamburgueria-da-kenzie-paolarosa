@@ -8,6 +8,9 @@ export const UlStyled = styled.ul`
   display: flex;
   padding: 0;
 
+  .NoProducts {
+    font-size: 20px;
+  }
   @media (min-width: 700px) {
     width: 100%;
     max-width: 1100px;

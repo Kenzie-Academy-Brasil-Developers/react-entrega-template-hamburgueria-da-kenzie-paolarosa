@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import { GlobalStyle } from "./components/GlobalStyles/global.js";
+import { GlobalStyle } from "./style/global.js";
 import { Header } from "./components/Header/Header.jsx";
 import { ProductsList } from "./components/ProductsList/ProductsList.jsx";
 import { Cart } from "./components/Cart/Cart.jsx";
@@ -18,6 +18,7 @@ function App() {
       try {
         const response = await api.get("products");
         setProducts(response.data);
+        setFilteredProducts(response.data);
       } catch (error) {
         console.error(error);
       }
@@ -42,6 +43,7 @@ function App() {
       />
       <Header
         setFilteredProducts={setFilteredProducts}
+        filteredProducts={filteredProducts}
         products={products}
         setProducts={setProducts}
       />

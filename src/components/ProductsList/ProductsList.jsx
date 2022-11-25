@@ -21,17 +21,6 @@ export function ProductsList({
       </UlStyled>
     );
   } else {
-    return (
-      <UlStyled>
-        {products.map((product, index) => (
-          <Product
-            product={product}
-            currentSale={currentSale}
-            setCurrentSale={setCurrentSale}
-            key={index}
-          />
-        ))}
-      </UlStyled>
-    );
+    return;
   }
 }
