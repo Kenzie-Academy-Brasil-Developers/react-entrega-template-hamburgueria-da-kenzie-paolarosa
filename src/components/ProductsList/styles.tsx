@@ -1,16 +1,29 @@
 import styled from "styled-components";
 
-export const LiStyled = styled.li`
-  height: 310px;
-  width: 300px;
-  min-width: 240px;
-  background: #ffffff;
-  border: 2px solid #e0e0e0;
-  border-radius: 5px;
+export const UlStyled = styled.ul`
+  height: 350px;
+  width: 100%;
+  overflow-x: auto;
+  list-style: none;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 10px 0 0 15px;
+  padding: 0;
+
+  .NoProducts {
+    font-size: 20px;
+  }
+
+  li {
+    height: 310px;
+    width: 300px;
+    min-width: 240px;
+    background: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 0 0 15px;
+  }
 
   div {
     height: 45%;
@@ -52,5 +65,14 @@ export const LiStyled = styled.li`
   }
 
   @media (min-width: 700px) {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    height: 100%;
+    margin-top: 20px;
+    justify-content: center;
   }
 `;
